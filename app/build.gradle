@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.ek.appiconchange'
+    namespace 'com.ek.appiconchanger'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.ek.appiconchange"
+        applicationId "com.ek.appiconchanger"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -41,4 +41,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta02'
+
 }

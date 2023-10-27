@@ -5,7 +5,7 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.ek.appiconchange.R
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class MainActivity : AppCompatActivity() {
     private lateinit var holidayBtn: Button
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED
             }
             packageManager.setComponentEnabledSetting(
-                ComponentName(applicationContext, "com.ek.appiconchange.${value.name}"),
+                ComponentName(applicationContext, "com.ek.appiconchanger.${value.name}"),
                 action, PackageManager.DONT_KILL_APP
             )
         }
