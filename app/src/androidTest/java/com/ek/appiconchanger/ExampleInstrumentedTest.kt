@@ -1,4 +1,4 @@
-package com.ek.appiconchange
+package com.ek.appiconchanger
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

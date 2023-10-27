@@ -1,13 +1,11 @@
-package com.ek.appiconchange
+package com.ek.appiconchanger
 
 import android.content.ComponentName
-import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.core.content.res.ResourcesCompat
-import androidx.core.graphics.drawable.toBitmap
+import com.ek.appiconchange.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var holidayBtn: Button

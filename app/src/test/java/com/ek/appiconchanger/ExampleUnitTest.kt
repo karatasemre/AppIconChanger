@@ -1,4 +1,4 @@
-package com.ek.appiconchange
+package com.ek.appiconchanger
 
 import org.junit.Test
 
