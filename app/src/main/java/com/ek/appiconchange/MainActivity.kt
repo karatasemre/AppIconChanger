@@ -1,10 +1,12 @@
 package com.ek.appiconchange
 
 import android.content.ComponentName
+import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.core.content.res.ResourcesCompat
 
 class MainActivity : AppCompatActivity() {
     private lateinit var holidayBtn: Button
@@ -15,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initialize()
         handleClickEvents()
+
+
     }
     private fun handleClickEvents() {
         newYearBtn.setOnClickListener {
@@ -46,5 +50,14 @@ class MainActivity : AppCompatActivity() {
         holidayBtn = findViewById(R.id.holiday_btn)
         newYearBtn = findViewById(R.id.new_year_btn)
         birthdayBtn = findViewById(R.id.birthday_btn)
+    }
+
+    fun Context.updateAppIcon(mipmapResId: Int) {
+        // Uygulama simgesini değiştirin.
+        val icon = ResourcesCompat.getDrawable(resources, mipmapResId, null).toString()
+        val appInfo = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
+        val appIcon = appInfo.icon
+        appInfo.icon = Integer.parseInt(icon)
+        packageManager.updateApplicationInfo(appInfo, 0)
     }
 }
