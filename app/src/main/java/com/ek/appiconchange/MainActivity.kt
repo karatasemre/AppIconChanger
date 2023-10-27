@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.graphics.drawable.toBitmap
 
 class MainActivity : AppCompatActivity() {
     private lateinit var holidayBtn: Button
@@ -54,10 +55,10 @@ class MainActivity : AppCompatActivity() {
 
     fun Context.updateAppIcon(mipmapResId: Int) {
         // Uygulama simgesini değiştirin.
-        val icon = ResourcesCompat.getDrawable(resources, mipmapResId, null).toString()
+        val icon = ResourcesCompat.getDrawable(resources, mipmapResId, null)
+            ?.toBitmap()
         val appInfo = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
-        val appIcon = appInfo.icon
-        appInfo.icon = Integer.parseInt(icon)
+        appInfo.icon = icon
         packageManager.updateApplicationInfo(appInfo, 0)
     }
 }
