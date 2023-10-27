@@ -1,0 +1,13 @@
+<splash xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="3000"
+    android:screenOrientation="portrait"
+    android:theme="@style/Theme.AppIconChange">
+
+    <color android:color="@color/black" />
+
+    <image android:id="@+id/splash_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_holiday" />
+</splash>
