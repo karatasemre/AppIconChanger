@@ -14,18 +14,14 @@
         tools:targetApi="31">
         <activity android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity-alias
-            android:name=".HOLIDAY"
+            android:name=".Holiday"
             android:enabled="true"
             android:exported="true"
             android:icon="@mipmap/ic_holiday"
-            android:label="@string/app_name"
+            android:label="Holiday"
             android:roundIcon="@mipmap/ic_holiday"
             android:targetActivity=".MainActivity">
             <intent-filter>
@@ -36,11 +32,11 @@
         </activity-alias>
 
         <activity-alias
-            android:name=".BIRTHDAY"
+            android:name=".Birthday"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_birthday"
-            android:label="@string/app_name"
+            android:label="Birthday"
             android:roundIcon="@mipmap/ic_birthday"
             android:targetActivity=".MainActivity">
             <intent-filter>
@@ -51,12 +47,12 @@
         </activity-alias>
 
         <activity-alias
-            android:name=".NEWYEAR"
+            android:name=".NewYear"
             android:enabled="false"
             android:roundIcon="@mipmap/ic_new_year"
             android:exported="true"
             android:icon="@mipmap/ic_new_year"
-            android:label="@string/app_name"
+            android:label="New Year"
             android:targetActivity=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

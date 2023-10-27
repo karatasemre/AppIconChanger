@@ -1,4 +1,3 @@
 package com.ek.appiconchange
 
-enum class AppIconEnum { HOLIDAY, BIRTHDAY, NEWYEAR, MainActivity
-}
+enum class AppIconEnum { Holiday, Birthday, NewYear }

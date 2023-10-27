@@ -23,13 +23,14 @@ class MainActivity : AppCompatActivity() {
     }
     private fun handleClickEvents() {
         newYearBtn.setOnClickListener {
-            changeIcon(AppIconEnum.NEWYEAR)
+            changeIcon(AppIconEnum.NewYear)
         }
         birthdayBtn.setOnClickListener {
-            changeIcon(AppIconEnum.BIRTHDAY)
+            changeIcon(AppIconEnum.Birthday)
         }
         holidayBtn.setOnClickListener {
-            changeIcon(AppIconEnum.HOLIDAY)
+            changeIcon(AppIconEnum.Holiday)
+
         }
     }
 
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED
             }
             packageManager.setComponentEnabledSetting(
-                ComponentName("com.ek.appiconchange", "com.ek.appiconchange.${value.name}"),
+                ComponentName(applicationContext, "com.ek.appiconchange.${value.name}"),
                 action, PackageManager.DONT_KILL_APP
             )
         }
@@ -51,15 +52,5 @@ class MainActivity : AppCompatActivity() {
         holidayBtn = findViewById(R.id.holiday_btn)
         newYearBtn = findViewById(R.id.new_year_btn)
         birthdayBtn = findViewById(R.id.birthday_btn)
-    }
-
-    fun Context.updateAppIcon(mipmapResId: Int) {
-        // Uygulama simgesini değiştirin.
-        val icon = ResourcesCompat.getDrawable(resources, mipmapResId, null)
-        if (icon != null) {
-            val appInfo = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
-            appInfo.icon = icon.toBitmap()
-            packageManager.updateApplicationInfo(appInfo, 0)
-        }
     }
 }
