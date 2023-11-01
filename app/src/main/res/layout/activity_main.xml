@@ -3,30 +3,45 @@
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/holiday_btn"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingVertical="24dp"
+        android:textSize="16sp"
         android:text="Holiday" />
 
 
     <Button
         android:id="@+id/new_year_btn"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="24dp"
+        android:textSize="16sp"
+        android:paddingVertical="24dp"
         android:text="New Year" />
 
 
     <Button
         android:id="@+id/birthday_btn"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingVertical="24dp"
         android:text="Birthday" />
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="24dp"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        android:text="Reset" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

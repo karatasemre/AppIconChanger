@@ -2,23 +2,22 @@ package com.ek.appiconchanger
 
 import android.content.ComponentName
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var holidayBtn: Button
     private lateinit var newYearBtn: Button
     private lateinit var birthdayBtn: Button
+    private lateinit var resetBtn: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initialize()
         handleClickEvents()
-
-
     }
+
     private fun handleClickEvents() {
         newYearBtn.setOnClickListener {
             changeIcon(AppIconEnum.NewYear)
@@ -28,7 +27,9 @@ class MainActivity : AppCompatActivity() {
         }
         holidayBtn.setOnClickListener {
             changeIcon(AppIconEnum.Holiday)
-
+        }
+        resetBtn.setOnClickListener {
+            changeIcon(AppIconEnum.MainActivity)
         }
     }
 
@@ -50,5 +51,6 @@ class MainActivity : AppCompatActivity() {
         holidayBtn = findViewById(R.id.holiday_btn)
         newYearBtn = findViewById(R.id.new_year_btn)
         birthdayBtn = findViewById(R.id.birthday_btn)
+        resetBtn = findViewById(R.id.reset_btn)
     }
 }
